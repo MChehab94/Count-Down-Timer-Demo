@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setButtonCountDownListener(){
         buttonCountDown.setOnClickListener(e -> {
+            if(editText.getText().toString().length() == 0){
+                return;
+            }
             buttonStopCountDown.setEnabled(true);
             remainingTime = Integer.parseInt(editText.getText().toString());
             remainingTime *= 1000;
