@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             textViewCountDown.setText(savedInstanceState.getString("textViewCountDown"));
             if(didStartCountDown){
                 startCountDownTimer(remainingTime, INTERVAL);
+                buttonStopCountDown.setEnabled(true);
             }
         }
     }
